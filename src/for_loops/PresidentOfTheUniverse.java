@@ -10,20 +10,22 @@ public class PresidentOfTheUniverse {
 		int n = Integer.parseInt(num);
 		for(int i = n; i > 0; i--){
 			String mun = JOptionPane.showInputDialog("Dwanye Johnson or Bill Nye?");
-			if(mun == "Dwayne Johnson"){
+			if(mun.equals("Dwayne Johnson")){
 				dj++;
-				System.out.println(dj);
 			}
-			if(mun == "Bill Nye"){
+			if(mun.equals("Bill Nye")){
 				bn++;
-				System.out.println(bn);
 			}
 		}
+		
 		if(bn > dj){
-			System.out.println("Bill Nye wins!");
+			JOptionPane.showMessageDialog(null, "Bill Nye wins!");
 		}
 		if(dj > bn){
-			System.out.println("Dwanye Johnson wins!");
+			JOptionPane.showMessageDialog(null, "Dwayne Johnson wins!");
+		}
+		if (dj == bn){
+			JOptionPane.showMessageDialog(null, "They tied!");
 		}
 	}
 }
